@@ -266,6 +266,36 @@ docs: 完成时空编码器报告章节
 
 禁止直接向 `main` 推送未经检查的代码。
 
+### 6.1 成员加入仓库
+
+其他成员加入本仓库时，请先把自己的 GitHub 用户名发给仓库负责人（成员1）。个人账号仓库通常由负责人主动发送邀请，成员接受邀请后即可获得协作权限。
+
+负责人同意成员加入的步骤：
+
+1. 打开仓库主页：<https://github.com/LittleRabbit321/Machine_learning>；
+2. 进入 `Settings` → `Collaborators`（或 `Collaborators and teams`）；
+3. 点击 `Add people`，搜索成员的 GitHub 用户名；
+4. 发送邀请，并建议授予 `Write` 权限；
+5. 成员接受 GitHub 邀请后，再克隆仓库或同步已有本地项目。
+
+成员接受邀请后，可以使用以下命令获取项目：
+
+```bash
+git clone https://github.com/LittleRabbit321/Machine_learning.git
+cd Machine_learning
+git checkout -b feature/你的任务名称
+```
+
+如果成员已经在本地有项目，不要直接覆盖 `main`，应先添加目标仓库并同步：
+
+```bash
+git remote add origin https://github.com/LittleRabbit321/Machine_learning.git
+git fetch origin
+git checkout -b feature/你的任务名称 origin/main
+```
+
+完成任务后，成员将分支推送到 GitHub，并创建 Pull Request；负责人检查代码和测试结果后再合并。成员也可以直接把 GitHub 用户名发给负责人，由负责人完成邀请和权限确认。
+
 ## 7. 开发阶段的模拟数据
 
 在真实数据模块完成前，其他成员可以使用以下模拟数据独立开发：
